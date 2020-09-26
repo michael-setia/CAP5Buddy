@@ -9,7 +9,6 @@ import seedu.address.model.Model;
  * Changes the remark of an existing person in the address book.
  */
 public class RemarkCommand extends Command {
-
     private final Index index;
     private final String remark;
 
