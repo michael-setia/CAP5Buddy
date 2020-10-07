@@ -70,6 +70,10 @@ public class ParserManager {
             parser = new ViewTodoListParser();
             command = parser.parse("");
             return command;
+        case "deletetask":
+            parser = new DeleteTaskParser();
+            command = parser.parse(input);
+            return command;
         default:
             throw new ParseException("Invalid Command");
         }
