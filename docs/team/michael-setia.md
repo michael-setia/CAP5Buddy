@@ -71,7 +71,7 @@ Given below are my contributions to the project.
     * Added documentation for ContactList [**sort**](https://ay2021s1-cs2103t-f12-3.github.io/tp/UserGuide.html#sorting-contacts-sortcontact) and [**mark**](https://ay2021s1-cs2103t-f12-3.github.io/tp/UserGuide.html#marking-contacts-as-important-importantcontact) feature 
     (Pull Request [**#474**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/474))
   * Developer Guide:
-    * Added implementation details for [**TodoList**](https://ay2021s1-cs2103t-f12-3.github.io/tp/DeveloperGuide.html#todo-list)
+    * Added implementation details for [**TodoList**](https://ay2021s1-cs2103t-f12-3.github.io/tp/DeveloperGuide.html#todolist-feature)
     (Pull Request [**#331**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/331)
     [**#678**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/678))
     * Added implementation details for [**Sort Contacts Feature**](https://ay2021s1-cs2103t-f12-3.github.io/tp/DeveloperGuide.html#sort-contacts-feature) 
