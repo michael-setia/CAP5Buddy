@@ -65,7 +65,7 @@ Given below are my contributions to the project.
 
 * **Documentation:**
   * User Guide:
-    * Added documentation under [**Todo List Features**](https://ay2021s1-cs2103t-f12-3.github.io/tp/UserGuide.html#todo-list-features) and updated [**Command Summary**](https://ay2021s1-cs2103t-f12-3.github.io/tp/UserGuide.html#command-summary-for-todo-list) for TodoList
+    * Added documentation under [**Todo List Features**](https://ay2021s1-cs2103t-f12-3.github.io/tp/UserGuide.html#todo-list-features) and updated Command Summary for TodoList
     (Pull Request [**#338**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/338)
     [**#474**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/474))
     * Added documentation for ContactList [**sort**](https://ay2021s1-cs2103t-f12-3.github.io/tp/UserGuide.html#sorting-contacts-sortcontact) and [**mark**](https://ay2021s1-cs2103t-f12-3.github.io/tp/UserGuide.html#marking-contacts-as-important-importantcontact) feature 
