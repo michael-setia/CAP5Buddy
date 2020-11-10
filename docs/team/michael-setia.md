@@ -24,7 +24,7 @@ Given below are my contributions to the project.
     * Added TodoList base classes to the main code (Pull Request 
     [**#243**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/243) 
     [**#229**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/229))
-    * Updated and refined GUI for TodoList (Pull Request 
+    * **[Notable Feature]** Updated and refined GUI for TodoList (Pull Request 
     [**#433**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/433)
     [**#404**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/404))
     * Added commands for TodoList (Pull Request 
@@ -35,21 +35,21 @@ Given below are my contributions to the project.
     [**#311**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/311)
     [**#339**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/339)
     [**#451**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/451))
-    * Added sorting function and command for TodoList (Pull Request 
+    * **[Notable Feature]** Added sorting function and command for TodoList (Pull Request 
     [**#320**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/320)
     [**#416**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/416))
     * Updated storage component for TodoList (Pull Request 
     [**#412**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/412))
 
-* **Enhancement:** Added sorting and marking feature for contact list
-  * **What it does:** This feature allows the user to sort the contact list based on the name of the persons. In addition
+* **Enhancement:** Added sorting and marking feature for Contact List
+  * **What it does:** This feature allows the user to sort the Contact List based on the name of the persons. In addition
   a feature to mark a contact as important is also added.
   * **Justification:** This feature helps the user to organize their contacts since it will be much easier if the list
   is sorted. Being able to mark the contact as important will also help the user find their important/oftenly contacted persons.
   * **Highlights:**
-    * Added sorting function and command for TodoList (Pull Request 
-    [**#320**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/320))
-    * Added marking function and command for TodoList (Pull Request 
+    * Added sorting function and command for Contact List (Pull Request 
+    [**#374**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/374))
+    * Added marking function and command for Contact List (Pull Request 
     [**#402**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/402))
 
 * **Enhancement:** Implemented mechanism to store zoomlinks (storage component only)
