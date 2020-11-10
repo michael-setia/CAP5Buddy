@@ -37,7 +37,7 @@ Given below are my contributions to the project.
     [**#451**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/451))
     * **[Notable Feature]** Added sorting function and command for TodoList (Pull Request 
     [**#320**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/320)
-    [**#416**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/416))
+    [**#427**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/427))
     * Updated storage component for TodoList (Pull Request 
     [**#412**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/412))
 
@@ -48,7 +48,7 @@ Given below are my contributions to the project.
   is sorted. Being able to mark the contact as important will also help the user find their important/oftenly contacted persons.
   * **Highlights:**
     * Added sorting function and command for Contact List (Pull Request 
-    [**#374**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/374))
+    [**#386**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/386))
     * Added marking function and command for Contact List (Pull Request 
     [**#402**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/402))
 
