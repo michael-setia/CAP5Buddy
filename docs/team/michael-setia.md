@@ -96,7 +96,7 @@ Given below are my contributions to the project.
     * Pull Request :
     [**#538**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/538)
     [**#539**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/539)
-  * Comment on other team member's PR for bugs : [**394**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/394)
+  * Comment on other team member's PR for bugs : [**#394**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/394)
 
 * **Community:**
   * Reviewed and approved [**66 PRs**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pulls?q=is%3Apr+reviewed-by%3A%40me) in total
