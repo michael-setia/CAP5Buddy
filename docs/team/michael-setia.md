@@ -2,9 +2,9 @@
 layout: page
 title: Michael Setia Atmaja's Project Portfolio Page
 ---
-## Project: CAP 5 Buddy
+## Project: CAP5Buddy
 ### Project Overview
-CAP5Buddy is a desktop module tracker application used to centralize key module details.
+**CAP5Buddy** is a desktop module tracker application used to centralize key module details.
 The application is  optimized for use via a Command Line Interface (CLI). It also includes other
 powerful features like CAP Calculator, Grade Tracker, Contact List, Event List, Calendar, and Todo List.
 It is written in Java, and has about 40 kLoC.
