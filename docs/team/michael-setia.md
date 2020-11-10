@@ -76,7 +76,7 @@ Given below are my contributions to the project.
     [**#678**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/678))
     * Added implementation details for [**Sort Contacts Feature**](https://ay2021s1-cs2103t-f12-3.github.io/tp/DeveloperGuide.html#sort-contacts-feature) 
     (Pull Request [**#678**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/678))
-    * Added diagram for `Model` section (Pull Request [#323](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/323))
+    * Added diagram for `Model` section (Pull Request [**#323**](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/323))
 
 * **Testing:**
   * Added tests for most of the functions in TodoList feature (Pull Request 
