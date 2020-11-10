@@ -7,58 +7,107 @@ title: Michael Setia Atmaja's Project Portfolio Page
 
 ### Project Overview
 
-Cap 5 Buddy is a project developed for a software engineering module (CS2103T) at the National University of Singapore.
-It has a GUI created using JavaFX, and it is written in Java.
+CAP5Buddy is a desktop module tracker application used to centralize key module details.
+The application is  optimized for use via a Command Line Interface (CLI).
+It is written in Java, and has about 40 kLoC.
 
 ### Summary of Contributions
 
 Given below are my contributions to the project.
 
-* **New Feature**: Added TodoList feature as a task manager
-  * Added base implementation for TodoList.
-  * Implemented some of TodoList commands.
-  * Added a non-command feature to view statistics related to the TodoList.
-  * Updated GUI for TodoList (Tasks tab)
-  * The following are some notable commands that the TodoList have,
-   
-* **Notable Feature**: Added sorting feature for TodoList
-  * Added implementation for sorting a TodoList based on a criterion.
-  * Updated implementation of `Model` to support this feature
-  
-* **Notable Feature**: Enhanced task managing of TodoList by updating the GUI
-  * Added indicators for representing the state of a task
-  * Added a pie chart to show the completion ration of the tasks
-  * Added a bar chart to show the incoming tasks within a week
+* **Code contributed:** [RepoSense link](https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true&search=michael-setia)
 
-* **Notable Feature**: Contributed in implementing mechanism to store zoom links in a module
-  * Implemented the base code for storing zoom links in the memory or disk
-  * This implementation is used by zoom-links related commands
+* **New Feature:** Added TodoList feature as a task manager.
+  * **What it does:** This feature allows the user to track all the things that they need to do. Each task in the TodoList
+  contains useful information that can effectively help the user to manage their task. In addition, this feature also gives
+  some statistics about all the tasks that they currently have.
+  * **Justification:** This feature helps the user to be more productive, especially in managing their module-related tasks.
+  It adds value to the product by complementing the module tracker feature. 
+  * **Highlights:** 
+    * This feature requires integration in all the product components (from front end to back end).
+    * Added TodoList base classes to the main code (Pull Request 
+    [#243](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/243) 
+    [#229](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/229))
+    * Updated and refined GUI for TodoList (Pull Request 
+    [#433](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/433)
+    [#404](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/404))
+    * Added commands for TodoList (Pull Request 
+    [#627](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/627)
+    [#244](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/244)
+    [#307](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/307)
+    [#309](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/309)
+    [#311](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/311)
+    [#339](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/339)
+    [#451](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/451))
+    * Added sorting function and command for TodoList (Pull Request 
+    [#320](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/320)
+    [#416](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/416))
+    * Updated storage component for TodoList (Pull Request 
+    [#412](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/412))
 
-* **Code contributed**: [RepoSense link](https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true&search=michael-setia&sort=groupTitle&sortWithin=title&since=2020-08-14&timeframe=commit&mergegroup=&groupSelect=groupByRepos&checkedFileTypes=docs~functional-code~test-code~other)
+* **Enhancement:** Added sorting and marking feature for contact list
+  * **What it does:** This feature allows the user to sort the contact list based on the name of the persons. In addition
+  a feature to mark a contact as important is also added.
+  * **Justification:** This feature helps the user to organize their contacts since it will be much easier if the list
+  is sorted. Being able to mark the contact as important will also help the user find their important/oftenly contacted persons.
+  * **Highlights:**
+    * Added sorting function and command for TodoList (Pull Request 
+    [#320](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/320))
+    * Added marking function and command for TodoList (Pull Request 
+    [#402](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/402))
 
-* **Project management**:
-  * Approved and reviewed PRs with non-trivial comments.
+* **Enhancement:** Implemented mechanism to store zoomlinks (storage component only)
+  * **Highlights:**
+    * Implemented storage component for zoomlinks (Pull request 
+    [#421](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/421)
+    [#546](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/546))
 
-* **Enhancements to existing features**:
-  * Updated the card used to display each entry in the GUI.
-  * Updated the card used in the GUI to display the items in the list along with a progress bar.
+* **Project management:**
+  * Actively managed issues in team repository
+  * Managed and authored [75 issues](https://github.com/AY2021S1-CS2103T-F12-3/tp/issues?q=+is%3Aissue+author%3Amichael-setia+) in total
+  * Edited label color to be more intuitive
 
-* **Documentation**:
+* **Documentation:**
   * User Guide:
-    * Added documentation for `Task`.
-    * Added documentation for `TodoList` features (except for find command).
-    * Added documentation for `sortcontact` contacts command.
+    * Added documentation under [**Todo List Features**] (https://ay2021s1-cs2103t-f12-3.github.io/tp/UserGuide.html#todo-list-features) and updated [**Command Summary**](https://ay2021s1-cs2103t-f12-3.github.io/tp/UserGuide.html#command-summary-for-todo-list) for TodoList
+    (Pull Request [#338](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/338)
+    [#474](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/474))
+    * Added documentation for ContactList [**sort**](https://ay2021s1-cs2103t-f12-3.github.io/tp/UserGuide.html#sorting-contacts-sortcontact) and [**mark**](https://ay2021s1-cs2103t-f12-3.github.io/tp/UserGuide.html#marking-contacts-as-important-importantcontact) feature 
+    (Pull Request [#474](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/474))
   * Developer Guide:
-    * Added all implementation details for `Task`
-    * Added all implementation details for `TodoList` and all of its command (except `findcommand`)
-    * Added implementation details for `sortcontact` feature
-    * Added diagram and implementation details for `Model`
+    * Added implementation details for [TodoList](https://ay2021s1-cs2103t-f12-3.github.io/tp/DeveloperGuide.html#todo-list)
+    (Pull Request [#331](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/331)
+    [#678](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/678))
+    * Added implementation details for [Sort Contacts Feature](https://ay2021s1-cs2103t-f12-3.github.io/tp/DeveloperGuide.html#sort-contacts-feature) 
+    (Pull Request [#678](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/678))
+    * Added diagram for `Model` section (Pull Request [#323](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/323))
 
-* **Testing**:
-  * Did testing for most of the `TodoList` part (4000+ LoC)
-  * Did testing for basic commands for `ModuleTracker` (500+ LoC)
+* **Testing:**
+  * Added tests for most of the functions in TodoList feature (Pull Request 
+  [#632](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/632))
+  * Added tests for sorting and marking function in ContactList feature (Pull Request 
+  [#676](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/676))
+  * Added tests for some functions in ModuleTracker feature (Pull Request 
+  [#629](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/629))
+  * Refactored and added test files for ModuleTracker feature (Pull Request 
+  [#209](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/209))
 
-* **Community**:
-  * Reviewed and approved PRs e.g PR #316, PR #257 (more can be checked in GitHub)
-  * Added 50+ comments througout the project (can be checked in the module dashboard)
-  * Added comments as discussion e.g. PR #244 (more can be checked in GitHub)
+* **Bug fixing:**
+  * Fixed bugs from PE-D reports with extensive description:
+    * Issue (with description of the bug analysis and fix) : 
+    [#532](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/532)
+    [#535](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/535)
+    * Pull Request :
+    [#538](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/538)
+    [#539](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/539)
+
+* **Community:**
+  * Reviewed and approved [66 PRs](https://github.com/AY2021S1-CS2103T-F12-3/tp/pulls?q=is%3Apr+reviewed-by%3A%40me) in total
+  * Added total of 56 comments in other PRs (can be seen from [CS2103T tp comments dashboard](https://nus-cs2103-ay2021s1.github.io/dashboards/contents/tp-comments.html))
+  * Some approved PRs with non-trivial comments : 
+  [#316](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/316)
+  [#553](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/553)
+  [#405](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/405)
+  [#435](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/435)
+  [#555](https://github.com/AY2021S1-CS2103T-F12-3/tp/pull/555))
+  * Reported bugs for other team during PE-D (can be seen [here](https://github.com/michael-setia/ped/issues))
