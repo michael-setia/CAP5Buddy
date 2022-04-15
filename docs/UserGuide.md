@@ -6,11 +6,11 @@ title: User Guide
 ## Introduction
 
 Do you even find yourself struggling to manage all the different kinds of module information that you have to track? Are there too 
-many modules, contacts, tasks and events to remember? Well, do not worry, CAP5BUDDY is here to help.
+many modules, contacts, tasks and events to remember? Well, do not worry, CAP5Buddy is here to help.
 
-Cap 5 Buddy is a desktop application that helps NUS SoC students to keep track of their module details efficiently.
+CAP5Buddy is a desktop application that helps NUS SoC students to keep track of their module details efficiently.
 It helps you to centralize key module details, contacts and information while following your study progress. It is optimized for use via a Command Line Interface (CLI), while still having the 
-benefits of a Graphical User Interface (GUI). If you can type fast, Cap 5 Buddy can help you manage your module 
+benefits of a Graphical User Interface (GUI). If you can type fast, CAP5Buddy can help you manage your module 
 details and information more efficiently than traditional GUI apps.
 
 
@@ -25,12 +25,12 @@ details and information more efficiently than traditional GUI apps.
 
 1. Ensure you have Java `11` or above installed in your Computer.
 
-1. Download the latest `cap5buddy.jar` from [here](https://github.com/AY2021S1-CS2103T-F12-3/tp/releases).
+1. Download the latest `CAP5Buddy.jar` from [here](https://github.com/AY2021S1-CS2103T-F12-3/tp/releases).
 
-1. Copy the file to the folder you want to use as the _home folder_ Cap 5 Buddy application.
+1. Copy the file to the folder you want to use as the _home folder_ for the CAP5Buddy application.
 
 1. Double-click the file to start the app. The GUI similar to the one below should appear in a few seconds. <br>
-   ![GUI](images/OverallGUISnapShot.png)
+![GUI](images/ui.png)
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -113,8 +113,15 @@ Creates and add a new module to be stored in the system.
 
   * The module code you input must be **capitalised**, eg. `cs2103t` will be rejected while `CS2103T` is correct.
 
-   Examples :
+   Example :
    * `addmodule n/CS2103T` creates and adds the module CS2103T.
+   
+Expected Outcome: 
+  
+<p aligin="center"><img src="images/addmodule.png" border="2px solid black"></p>
+  
+  Other helpful example(s):
+
    * `addmodule n/CS2103T t/Coremodule` creates and adds the module CS2103T with the tag _CoreModule_.
 
 #### Adding a new completed module: `addcmodule`
@@ -151,6 +158,10 @@ Displays a snapshot of a module stored in the system.
 
   Example:
    * `viewmodule 1` views the first module in the displayed list.
+   
+Expected Outcome: 
+
+<p aligin="center"><img src="images/viewmodule.png" border="2px solid black"></p>
 
 #### Archiving a module: `archivemodule`
 
@@ -166,9 +177,16 @@ Format: `archivemodule` `INDEX`
 
  * The index **must be a positive integer** 1, 2, 3...
 
- Examples:
+ Example:
  * `archivemodule 1` Archives the first module in the displayed list.
- * `archivemodule 2` Archives the second module in the displayed list.
+ 
+Expected Outcome: 
+ 
+<p aligin="center"><img src="images/archivemodule.png" border="2px solid black"></p>
+  
+  Other helpful example(s):
+
+    * `archivemodule 2` Archives the second module in the displayed list.
 
 #### Un-archiving a module: `unarchivemodule`
 
@@ -208,7 +226,7 @@ Format: `listmodule`
  * Executing this command will remove the current archived module list from display if you are currently viewing it. You can use the `viewarchive` command to display the archived module list(See previous section).
 
  Examples:
- * `list` Views the un-archived module list on the display.
+ * `listmodule` Views the un-archived module list on the display.
 
 #### Locating modules: `findmodule`
 
@@ -236,12 +254,18 @@ Format: `listmodule`
       * Module name must match your search criteria exactly for module to be displayed, e.g. `cs2030` will match `CS2030` but not `CS20301`.
       
 
-  Examples:
+  Example:
 
-   * `findmodule n/cs2030` returns the module(if any) with the module name `CS2030`.
+   * `findmodule cs2030` returns the module(if any) with the module name `CS2030`.
 
+   Expected Outcome: 
+   
+<p aligin="center"><img src="images/findmodule.png" border="2px solid black"></p>
+       
+   Other helpful example(s):
+   
    * `findmodule cs2030 cs2100` returns the modules(if any) with the module names `CS2030` or `CS2100`.
-
+   
 
 ### Zoom link management feature
 
@@ -484,10 +508,16 @@ assignments will contain the following fields:
   * The assignment takes up a percentage of the final grade, `ASSIGNMENT_PERCENTAGE`.
 
   * Your `ASSIGNMENT_RESULT` can only range from `0.00 - 100`
+  
+  * The changes for your assignment would only be seen through using the `viewmodule` command.
 
   Example:
   * `addassignment n/CS2100 a/Quiz 1 %/5 r/80` adds an assignment called `Quiz 1` to the module `CS2100`. `Quiz 1`
   carries `5`% of the final grade and the result for this assignment is `80`.
+
+  Expected Outcome: 
+  
+ <p aligin="center"><img src="images/GradeTracker/AddAssignment.png" border="2px solid black"></p>
 
 #### Editing an assignment in a module: `editassignment`
 
@@ -527,9 +557,12 @@ To be implemented:
   * You can retrieve the index of the assignment list by using the `viewmodule` command to list out the details of the module.
 
   * The index **must be a positive integer** 1, 2, 3...
+  
+  * The changes for your assignment would only be seen through using the `viewmodule` command.
+
 
   Example of usage:
-   * `deleteassignment 2 n/CS2100` deletes the assignment at position `2` of the module `CS2100`.
+   * `deleteassignment 1 n/CS2100` deletes the assignment at position `1` of the module `CS2100`.
    
 #### Adding a grade to a module: `addgrade`
 
@@ -543,12 +576,18 @@ To be implemented:
   
   * The existing `GRADE` will be overwritten by the new `GRADE` being added.
   
+  * The changes for your assignment would only be seen through using the `viewmodule` command.
+
   Example of usage:
    * `addgrade n/CS2100 g/85` adds a grade of `85` to the module `CS2100`.
    
+   Expected Outcome: 
+     
+<p aligin="center"><img src="images/GradeTracker/AddGrade.png" border="2px solid black"></p>
+
 #### Calculating Cumulative Average Point(CAP): `calculatecap`
 
-Calculates the user's CAP based on completed modules
+Calculates your CAP based on completed modules
 
  Format: `calculatecap`
 
@@ -563,10 +602,13 @@ Calculates helpful CAP details based on the target CAP you input
 
   * The target cap refers to the desired CAP input by you
 
-  Examples:
+  Example:
   * `targetcap tc/4.5` Calculates CAP achievement required for planned modules in order to achieve target CAP
-  
+
 ### Todo List Features
+
+The GUI for TodoList is shown below
+<p aligin="center"><img src="images/TodoList/todo1.png" border="2px solid black"></p>
 
 Todo List can store all of your tasks that you need to complete. Before you start learning how to use the commands
 for Todo List, you should first understand the details of a task.
@@ -637,6 +679,10 @@ Examples:
 * `addtask n/read book t/DAILY t/HOBBY p/low d/2020-10-10` adds a task with the given input.
 
 * `addtask n/finish assignemnt t/SCHOOL d/2020-12-10` adds a task with the given input.
+
+Expected output:
+
+<p aligin="center"><img src="images/TodoList/todo2.png" border="2px solid black"></p>
 
 #### Deleting a task: `deletetask`
 
@@ -828,22 +874,6 @@ Format: `listtask`
 * _**Tips :**_ You can use `listtask` to go back to the original list after
   performing a `findtask` or `sorttask` command.
 
-#### Archiving a task: `archivetask` **(To be implemented)**
-
-Archives a task from the list.
-
-Format: `archivetask` `INDEX`
-
-* You can get the `INDEX` from the current displayed list under the `Tasks` tab.
-
-* `INDEX` must be a **positive integer**.
-
-Examples:
-
-* `archivetask 1` archive the first task.
-
-* `archivetask 2` archive the second task.
-
 #### Clearing the list: `cleartask`
 
 Clears all tasks in the list.
@@ -1034,6 +1064,7 @@ Expected Outcome:
 
  * You can remove all the contact’s tags by typing `t/` without specifying any tags after it, i.e. `editcontact 1 t/`
 
+
  Example: 
  
  `editcontact 2 n/amy lee e/amy-lee@gmail.com t/classmate` edits the second contact in the displayed contact list with the name `amy lee`, email `amy-lee@gmail.com` and tag `classmate`
@@ -1145,8 +1176,9 @@ Expected Outcome: <br>
 Creates and add a new Event with the specified information from the user input
 
   Format: `addevent n/EVENT_NAME d/DATE_TIME [t/TAG]`
-
+<p aligin="center"><img src="images/AddEventExample.png" border="2px solid black"></p>
    Examples:
+    * `addevent n/CS2100 Assignment 1 d/10-9-2020 1200 t/Important` adds an Event called C2100 Assignment 1 with the deadline of 10-9-2020 1200 and the tagging of Important.(Expected result shown in above image.)
     * `addevent n/CS2103T exams d/12-12-2020 1200` adds an Event called CS2103T into the Scheduler with the date 12-12-2020.
     * `addevent n/CS2103T exams d/12-12-2020 1200 t/Important` adds an Event called CS2103T into the Scheduler with the date 12-12-2020 and the tag of Important.
     * `addevent n/CS2103T exams d/12-12-2020 1200 t/Important t/Urgent` adds an Event called CS2103T into the Scheduler with the date 12-12-2020 and the tag of Important and Urgent.
@@ -1167,21 +1199,12 @@ as event name and the event date.
 
   Format: `editevent index [n/new name] [d/new date]`<br>
   **Note:** All fields are optional but at least 1 of them must be present.
-
+<p aligin="center"><img src="images/EditEventExample.png" border="2px solid black"></p>
    Examples:
-    * `editevent 1 n/CS2103T assignment d/2-4-2020 1200 t/Important` edits the event of index 1 with the new name of CS2103T, new date and time of 2-4-2020 1200 and the new tag of Important.
+    * `editevent 1 n/CS2103T assignment d/2-4-2020 1200 t/NotImportant` edits the event of index 1 with the new name of CS2103T, new date and time of 2-4-2020 1200 and the new tag of NotImportant. (Expected result shown in above image.)
     * `editevent 1 n/CS2100` edits the event of index 1 with the new name of CS2103T.
     * `editevent 1 d/3-3-2020 1300` edits the event of index 1 with the new date time of 3-3-2020 1300.
-    * `editevent 1 t/Not Important` edits the event of index 1 with the new tag of Not Important.
-
-#### Viewing an Event from the Scheduler: `viewevent`
-
-You can choose to view a particular event from the list by entering the index.
-
-  Format: `viewevent index`
-
-   Example:
-    * `viewevent 1` views the event details of index 1 from the EventList.
+    * `editevent 1 t/NotImportant` edits the event of index 1 with the new tag of Not Important.
 
 #### Finding an Event from the Scheduler: `findevent`
 
@@ -1189,10 +1212,19 @@ You can search for a particular event based on the name and date. This will retu
 
   Format: `findevent [n/EVENT_NAME] [d/DATE_TIME]`
   **Note:** All fields are optional but at least 1 of them must be present.
-   
+
    Examples:
     * `findevent n/CS2103T` finds all events that have **CS2103T** in their event name.
     * `findevent d/1-1-2020 1200` finds all event that have the date and time of **1 Jan 2020 12:00**.
+
+#### List events: `listevent`
+
+Allows you to view all events.
+
+Format: `listevent`
+
+ Examples:
+ * `listevent` Views the event list on the display.
 
 ### General Features
 
@@ -1238,7 +1270,7 @@ Format: `help`
 
 * _**Tips :**_ If you accidentally cleared the whole list, you can always use the `undo` command
   to restore the list.
---------------------------------------------------------------------------------------------------------------------
+  
 
 ## FAQ
 
@@ -1280,7 +1312,7 @@ Action | Format, Examples
 **Calculate CAP** | `calculatecap` <br> e.g. `calculatecap`
 **Calculate Target CAP details** | `targetcap tc/TARGET_CAP` <br> e.g. `targetcap 4.5`
 
-## Command Summary for ContactList
+## Command Summary for Contact List
 
 Action | Format, Examples
 -------|-------------------------
@@ -1291,7 +1323,7 @@ Action | Format, Examples
 **List Contacts** | `listcontact`
 **Sort Contacts** | `sortcontact`
 **Mark Contact as Important** | `importantcontact INDEX` <br> e.g. `importantcontact 1`
-**Mark Contact as unimportant | `resetcontact INDEX` <br> `resetcontact 1`
+**Mark Contact as unimportant** | `resetcontact INDEX` <br> `resetcontact 1`
 **Clear Contact**  | `clearcontact`
 
 
@@ -1299,6 +1331,15 @@ Action | Format, Examples
 
 Action | Format, Examples
 --------|------------------
+**Add Task** | `addtask n/TASK_NAME [t/TAG]... [p/PRIORITY] [d/DATE]`
+**Edit Task** | `edittask INDEX [n/TASK_NAME] [t/TAG]... [p/PRIORITY] [d/DATE]`
+**Find Task** | `findtask [n/NAME_KEYWORDS] [d/DATE] [p/PRIORITY] [s/STATUS] [t/TAG_KEYWORDS]`
+**Delete Task** | `deletetask INDEX`
+**List Tasks** | `listtask`
+**Sort Tasks** | `sorttask [r] CRITERION`
+**Label Task as Completed** | `completetask INDEX`
+**Label Task as Not Completed** | `resettask INDEX`
+**Clear Tasks** | `cleartask`
 
 
 ## Command summary for Scheduler
@@ -1309,7 +1350,7 @@ Action | Format, Examples
 **Delete Event** | `deleteevent index` <br> e.g. `deleteevent 1`
 **Edit Event** | `editevent index [n/EVENT_NAME] [d/DATE_TIME] [t/TAG]` <br> e.g. `editevent 1 n/CS2100 d/2-1-2020 t/Done`
 **Find Event** | `findevent [n/EVENT_NAME] [d/DATE_TIME]` <br> e.g. `findevent n/CS2103T`
-**View Event** | `viewevent index` <br> e.g. `viewevent 1`
+**List Event** | `listevet` <br> e.g. `listevent`
 
 ## Command summary for general features
 

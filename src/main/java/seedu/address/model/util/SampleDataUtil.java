@@ -1,5 +1,6 @@
 package seedu.address.model.util;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
@@ -8,15 +9,21 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import seedu.address.model.ContactList;
 import seedu.address.model.EventList;
 import seedu.address.model.ModuleList;
 import seedu.address.model.ReadOnlyContactList;
 import seedu.address.model.ReadOnlyEventList;
 import seedu.address.model.ReadOnlyModuleList;
+import seedu.address.model.ReadOnlyTodoList;
+import seedu.address.model.TodoList;
 import seedu.address.model.contact.Contact;
 // import seedu.address.model.contact.ContactName;
 // import seedu.address.model.contact.Email;
 // import seedu.address.model.contact.Telegram;
+import seedu.address.model.contact.ContactName;
+import seedu.address.model.contact.Email;
+import seedu.address.model.contact.Telegram;
 import seedu.address.model.event.Event;
 import seedu.address.model.event.EventName;
 import seedu.address.model.event.EventTime;
@@ -31,30 +38,31 @@ import seedu.address.model.module.grade.AssignmentPercentage;
 import seedu.address.model.module.grade.AssignmentResult;
 import seedu.address.model.module.grade.GradeTracker;
 import seedu.address.model.tag.Tag;
+import seedu.address.model.task.Date;
+import seedu.address.model.task.Priority;
+import seedu.address.model.task.Status;
+import seedu.address.model.task.Task;
+import seedu.address.model.task.TaskName;
 
 /**
  * Contains utility methods for populating {@code AddressBook} with sample data.
  */
 public class SampleDataUtil {
-    public static Contact[] getSamplePersons() {
+
+    public static Contact[] getSampleContacts() {
         return new Contact[] {
-                /*
-                new Contact(new Name("Alex Yeoh"), new Email("alexyeoh@example.com"),
-                    new Telegram("@alexyeoh"), getTagSet("friends")),
-                new Contact(new ContactName("Bernice Yu"), new Email("berniceyu@example.com"),
-                    new Telegram("@bernice"), getTagSet("colleagues", "friends")),
-                new Contact(new ContactName("Charlotte Oliveiro"), new Email("charlotte@example.com"),
-                    new Telegram("@charlotte"), getTagSet("neighbours")),
-                new Contact(new ContactName("David Li"), new Email("lidavid@example.com"),
-                    new Telegram("@david"), getTagSet("family")),
-                new Contact(new ContactName("Irfan Ibrahim"), new Email("irfan@example.com"),
-                    new Telegram("@irfan"), getTagSet("classmates")),
-                new Contact(new ContactName("Roy Balakrishnan"), new Email("royb@example.com"),
-                new Contact(new Name("Roy Balakrishnan"), new Email("royb@example.com"),
-                    new Telegram("@roybala"))
-                    // getTagSet("colleagues"))
-                    new Telegram("@roybala"), getTagSet("colleagues"))
-            */
+            new Contact(new ContactName("Alex Yeoh"), new Email("alexyeoh@example.com"),
+                    new Telegram("@alexyeoh"), getTagSet("friends"), false),
+            new Contact(new ContactName("Bernice Yu"), new Email("berniceyu@example.com"),
+                    new Telegram("@bernice"), getTagSet("colleagues", "friends"), true),
+            new Contact(new ContactName("Charlotte Oliveiro"), new Email("charlotte@example.com"),
+                    new Telegram("@charlotte"), getTagSet("neighbours"), true),
+            new Contact(new ContactName("David Li"), new Email("lidavid@example.com"),
+                    new Telegram("@david"), getTagSet("family"), false),
+            new Contact(new ContactName("Irfan Ibrahim"), new Email("irfan@example.com"),
+                    new Telegram("@irfan"), getTagSet("classmates"), false),
+            new Contact(new ContactName("Roy Balakrishnan"), new Email("royb@example.com"),
+                    new Telegram("@roybala"), getTagSet("colleagues"), true)
         };
     }
 
@@ -101,13 +109,12 @@ public class SampleDataUtil {
     }
 
 
-    public static ReadOnlyContactList getSampleAddressBook() {
-        ModuleList sampleAb = new ModuleList();
-        for (Contact samplePerson : getSamplePersons()) {
-            // sampleAb.addPerson(samplePerson);
+    public static ReadOnlyContactList getSampleContactList() {
+        ContactList sampleContactList = new ContactList();
+        for (Contact sampleContact : getSampleContacts()) {
+            sampleContactList.addContact(sampleContact);
         }
-        // return sampleAb;
-        return null;
+        return sampleContactList;
     }
 
     /**
@@ -160,5 +167,37 @@ public class SampleDataUtil {
         Event sampleEventTwo = new Event(new EventName("CS2103T PE"), new EventTime(dateTime), tags);
         sampleEv.addEvent(sampleEventTwo);
         return sampleEv;
+    }
+
+    public static ReadOnlyTodoList getSampleTodoList() {
+        TodoList todoList = new TodoList();
+        for (Task t : getSampleTasks()) {
+            todoList.addTask(t);
+        }
+        return todoList;
+    }
+    public static Task[] getSampleTasks() {
+        Task first = new Task(new TaskName("Finish Lab 01"));
+        first = first.setTags(new HashSet<>(Arrays.asList(new Tag("Lab"), new Tag("CS2030"))));
+        first = first.setPriority(Priority.valueOf("HIGH"));
+        first = first.setDate(new Date(LocalDate.now().plusDays(3).toString()));
+        first = first.setStatus(Status.NOT_COMPLETED);
+        first = first.setDateCreated(LocalDate.now().minusDays(1));
+
+        Task second = new Task(new TaskName("Finish Lab 02"));
+        second = second.setTags(new HashSet<>(Arrays.asList(new Tag("Lab"), new Tag("CS2100"))));
+        second = second.setPriority(Priority.valueOf("NORMAL"));
+        second = second.setDate(new Date(LocalDate.now().plusDays(4).toString()));
+        second = second.setStatus(Status.NOT_COMPLETED);
+        first = first.setDateCreated(LocalDate.now().minusDays(2));
+
+        Task third = new Task(new TaskName("Finish Assignment03"));
+        third = third.setTags(new HashSet<>(Arrays.asList(new Tag("Assignment"), new Tag("CS2105"))));
+        third = third.setPriority(Priority.valueOf("LOW"));
+        third = third.setDate(new Date(LocalDate.now().plusDays(5).toString()));
+        third = third.setStatus(Status.COMPLETED);
+        first = first.setDateCreated(LocalDate.now().minusDays(1));
+
+        return new Task[] {first, second, third};
     }
 }

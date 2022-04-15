@@ -173,7 +173,7 @@ public class MainApp extends Application {
             contactListOptional = storage.readContactList();
             if (!contactListOptional.isPresent()) {
                 logger.info("Data file not found. Will be starting with a sample ContactList");
-                initialContactList = new ContactList();
+                initialContactList = contactListOptional.orElseGet(SampleDataUtil::getSampleContactList);
             } else {
                 initialContactList = contactListOptional.get();
             }
@@ -189,15 +189,15 @@ public class MainApp extends Application {
     }
 
     private ReadOnlyEventList initializeEventList(Storage storage) {
-        Optional<ReadOnlyEventList> contactListOptional;
+        Optional<ReadOnlyEventList> eventListOptional;
         ReadOnlyEventList initialEventList;
         try {
-            contactListOptional = storage.readEventList();
-            if (!contactListOptional.isPresent()) {
+            eventListOptional = storage.readEventList();
+            if (!eventListOptional.isPresent()) {
                 logger.info("Data file not found. Will be starting with a sample EventList");
                 initialEventList = SampleDataUtil.getSampleEventList();
             } else {
-                initialEventList = contactListOptional.get();
+                initialEventList = eventListOptional.get();
             }
         } catch (DataConversionException ex) {
             logger.warning("Data file not in the correct format. Will be starting with an empty EventList");
@@ -222,7 +222,7 @@ public class MainApp extends Application {
             todoListOptional = storage.readTodoList();
             if (!todoListOptional.isPresent()) {
                 logger.info("Data file not found. Will be starting with a sample TodoList");
-                initialTodoList = new TodoList();
+                initialTodoList = todoListOptional.orElseGet(SampleDataUtil::getSampleTodoList);
             } else {
                 initialTodoList = todoListOptional.get();
             }

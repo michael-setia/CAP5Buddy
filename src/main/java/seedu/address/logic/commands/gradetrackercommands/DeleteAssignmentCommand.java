@@ -2,6 +2,7 @@ package seedu.address.logic.commands.gradetrackercommands;
 
 import static java.util.Objects.requireNonNull;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;
+import static seedu.address.model.Model.PREDICATE_SHOW_ALL_MODULES;
 
 import java.util.List;
 import java.util.logging.Logger;
@@ -18,6 +19,9 @@ import seedu.address.model.module.ModuleName;
 import seedu.address.model.module.grade.Assignment;
 import seedu.address.model.module.grade.GradeTracker;
 
+/**
+ * Encapsulates methods and information to delete an assignment from the gradetracker of a module at a specified index.
+ */
 public class DeleteAssignmentCommand extends Command {
     public static final String COMMAND_WORD = "deleteassignment";
 
@@ -67,14 +71,15 @@ public class DeleteAssignmentCommand extends Command {
         }
         GradeTracker gradeTracker = module.getGradeTracker();
         if (targetIndex.getOneBased() > gradeTracker.getSortedAssignments().size() || targetIndex.getOneBased() < 0) {
-            throw new CommandException(Messages.MESSAGE_INVALID_MODULE_DISPLAYED_INDEX);
+            throw new CommandException(Messages.MESSAGE_INVALID_ASSIGNMENT_DISPLAYED_INDEX);
         }
-        Assignment assignmentToDelete = gradeTracker.getSortedAssignments().get(targetIndex.getOneBased());
+        Assignment assignmentToDelete = gradeTracker.getAssignments().get(targetIndex.getZeroBased());
         gradeTracker.removeAssignment(assignmentToDelete);
         gradeTracker.calculateNewGrade();
         Module updatedModule = module.setGradeTracker(gradeTracker);
         logger.info("Assignment has been deleted: " + assignmentToDelete.toString());
         model.setModule(module, updatedModule);
+        model.updateFilteredModuleList(PREDICATE_SHOW_ALL_MODULES);
         model.commitModuleList();
         return new CommandResult(String.format(MESSAGE_DELETE_ASSIGNMENT_SUCCESS, assignmentToDelete, module));
     }
